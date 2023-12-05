@@ -9,11 +9,7 @@ export default function Card({
 }) {
   return (
     <div className="my-5 shadow-lg w-72 max-w-md p-2 rounded-[20px] overflow-hidden bg-white hover:scale-105 transition-all duration-200 active:bg-gray-300">
-      <Image
-        className="h-48 rounded w-half shadow-md m-auto"
-        alt="meaningful text to make the scary warnings disappear"
-        src={img}
-      />
+      <Image className="h-48 rounded w-half shadow-md m-auto" src={img} />
       <h1 className="font-bold text-xl mb-1">{title}</h1>
       <h2 className="text-gray-500 mb-4">{subtitle}</h2>
       <p className="p-1 mb-3 text-gray-900 text-base border border-solid rounded-lg border-slate-500">{description}</p>

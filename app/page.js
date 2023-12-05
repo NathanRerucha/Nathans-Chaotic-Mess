@@ -4,7 +4,14 @@ import PageContent from './components/pageContent'
 import Card from './components/Card'
 import PageLogo from './components/Logo'
 
-export default function Home() {
+import { createClient } from '@supabase/supabase-js'
+
+// Create a single supabase client for interacting with your database
+const supabase = createClient('https://fjsdwfsbprblvilylazn.supabase.co', process.env.SUPER_ULTRA_SECRET)
+
+export default async function Home() {
+  const { data: xards, error } = await supabase.from('xards').select('*')
+
   return (
     <div>
       <Navbar />
@@ -12,9 +19,16 @@ export default function Home() {
         <PageTitle title="Home" />
         <PageContent />
         <div className="flex justify-center gap-10 flex-wrap ">
-          <Card title="First card" subtitle="card 1" description="this is a description of a card" authors="me" />
-          <Card title="Second card" subtitle="card 2" description="this is a really cute cat" authors="me" />
-          <Card title="Third card" subtitle="card 3" description="javascript is neat" authors="me" />
+          {xards.map((xards, idx) => (
+            <Card
+              key={idx}
+              title={xards.title}
+              subtitle={xards.subtitle}
+              img={xards.img}
+              description={xards.description}
+              authors={xards.authors}
+            />
+          ))}
         </div>
         <PageContent content="These are even more words!" />
       </div>

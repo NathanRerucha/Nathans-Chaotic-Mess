@@ -9,6 +9,8 @@ import { createClient } from '@supabase/supabase-js'
 // Create a single supabase client for interacting with your database
 const supabase = createClient('https://fjsdwfsbprblvilylazn.supabase.co', process.env.SUPABASE_SERVICE_ROLE_KEY)
 
+export const revalidate = 0
+
 export default async function Home() {
   const { data: xards, error } = await supabase.from('xards').select('*')
 

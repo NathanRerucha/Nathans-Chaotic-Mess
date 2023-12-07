@@ -9,7 +9,7 @@ async function createCard(formData) {
   'use server'
   const title = formData.get('title')
   const subtitle = formData.get('subtitle')
-  const img = formData.get('img')
+  let img = formData.get('img')
   const description = formData.get('description')
   if (['EMPTY', 'NULL', ''].includes(img)) {
     img = 'https://placekitten.com/500/300'

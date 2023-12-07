@@ -11,6 +11,12 @@ async function createCard(formData) {
   const subtitle = formData.get('subtitle')
   const img = formData.get('img')
   const description = formData.get('description')
+  if (['EMPTY', 'NULL', ''].includes(img)) {
+    img = 'https://placekitten.com/500/300'
+  }
+  if (!img.includes('http')) {
+    img = 'https://placekitten.com/500/300'
+  }
   insertCard({ title, subtitle, img, description })
   redirect('/')
 }
@@ -23,19 +29,19 @@ export default function CardForm() {
     >
       <Field>
         <Label label="Image" />
-        <Input id="img" name="img" />
+        <Input id="img" name="img" placeholder="enter image URL here" />
       </Field>
       <Field>
         <Label label="Title" />
-        <Input id="title" name="title" />
+        <Input id="title" name="title" placeholder="enter card title here" />
       </Field>
       <Field>
         <Label label="Subtitle" />
-        <Input id="subtitle" name="subtitle" />
+        <Input id="subtitle" name="subtitle" placeholder="enter card subtitle here" />
       </Field>
       <Field>
         <Label label="Description" />
-        <Input id="description" name="description" />
+        <Input id="description" name="description" placeholder="enter card description here" />
       </Field>
       <Button type="submit button">Add Card</Button>
     </form>

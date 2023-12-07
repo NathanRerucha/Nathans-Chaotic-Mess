@@ -1,16 +1,17 @@
 import { createClient } from '@supabase/supabase-js'
 
 export function getClient() {
-  const supabase = createClient(<url />, <secret />)
+  const supabase = createClient('https://fjsdwfsbprblvilylazn.supabase.co', process.env.SUPABASE_SERVICE_ROLE_KEY)
   return supabase
 }
 
 export async function insertCard(card) {
   const supabase = getClient()
-  // implement https://supabase.com/docs/reference/javascript/insert
+  const { error } = await supabase.from('xards').insert(card)
 }
 
 export async function findCards() {
   const supabase = getClient()
-  // implements https://supabase.com/docs/reference/javascript/select
+  const { data: xards, error } = await supabase.from('xards').select('*')
+  return xards
 }

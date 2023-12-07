@@ -3,7 +3,7 @@ import PageTitle from './components/pageTitle'
 import PageContent from './components/pageContent'
 import Card from './components/Card'
 import PageLogo from './components/Logo'
-
+import { findCards } from './utils/supabase-client'
 import { createClient } from '@supabase/supabase-js'
 
 // Create a single supabase client for interacting with your database
@@ -12,7 +12,7 @@ const supabase = createClient('https://fjsdwfsbprblvilylazn.supabase.co', proces
 export const revalidate = 0
 
 export default async function Home() {
-  const { data: xards, error } = await supabase.from('xards').select('*')
+  const xards = await findCards()
 
   return (
     <div>
@@ -28,7 +28,6 @@ export default async function Home() {
               subtitle={xards.subtitle}
               img={xards.img}
               description={xards.description}
-              authors={xards.authors}
             />
           ))}
         </div>

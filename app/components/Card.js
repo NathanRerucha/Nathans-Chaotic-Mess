@@ -1,17 +1,10 @@
-export default function Card({
-  img = 'http://placekitten.com/g/200/300',
-  title = 'Fake Title',
-  subtitle = 'Fake Subtitle',
-  description = 'Fake Description',
-  authors = 'Fake Authors',
-}) {
+export default function Card({ img, title, subtitle, description }) {
   return (
-    <div className="my-5 shadow-lg w-72 max-w-md p-2 rounded-[20px] overflow-hidden bg-white hover:scale-105 transition-all duration-200 active:bg-gray-300">
-      <img className="h-48 rounded w-half shadow-md m-auto" src={img} alt="Meaningful alt text" />
+    <div className="flex flex-col my-5 justify-start shadow-lg w-72 max-w-md h-fit p-2 rounded-[20px] overflow-hidden bg-white hover:scale-105 transition-all duration-200 active:bg-gray-300">
+      <img className="h-48 rounded w-half shadow-md mx-auto" src={img} />
       <h1 className="font-bold text-xl mb-1">{title}</h1>
       <h2 className="text-gray-500 mb-4">{subtitle}</h2>
-      <p className="p-1 mb-3 text-gray-900 text-base border border-solid rounded-lg border-slate-500">{description}</p>
-      <span className="bg-gray-300 px-1 py-1 text-sm font-semibold text-gray-700 mr-2 mb-10">{authors}</span>
+      <p className="p-1 mb-1 text-gray-900 text-base border border-solid rounded-lg border-slate-500">{description}</p>
     </div>
   )
 }

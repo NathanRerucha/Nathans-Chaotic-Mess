@@ -7,15 +7,24 @@ import Label from './Label'
 
 async function createCard(formData) {
   'use server'
-  const title = formData.get('title')
-  const subtitle = formData.get('subtitle')
+  let title = formData.get('title')
+  let subtitle = formData.get('subtitle')
   let img = formData.get('img')
-  const description = formData.get('description')
+  let description = formData.get('description')
   if (['EMPTY', 'NULL', ''].includes(img)) {
     img = 'https://placekitten.com/500/300'
   }
   if (!img.includes('http')) {
     img = 'https://placekitten.com/500/300'
+  }
+  if (['EMPTY', 'NULL', ''].includes(title)) {
+    title = 'Title'
+  }
+  if (['EMPTY', 'NULL', ''].includes(subtitle)) {
+    subtitle = 'Subtitle'
+  }
+  if (['EMPTY', 'NULL', ''].includes(description)) {
+    description = 'Description'
   }
   insertCard({ title, subtitle, img, description })
   redirect('/')

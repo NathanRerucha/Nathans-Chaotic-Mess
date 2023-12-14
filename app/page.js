@@ -3,6 +3,7 @@ import PageTitle from './components/pageTitle'
 import PageContent from './components/pageContent'
 import Card from './components/Card'
 import PageLogo from './components/Logo'
+import Footer from './components/Footer'
 import { findCards } from './utils/supabase-client'
 import { createClient } from '@supabase/supabase-js'
 
@@ -16,10 +17,13 @@ export default async function Home() {
 
   return (
     <div>
-      <Navbar />
+      <PageLogo />
+      <div className="my-4">
+        <Navbar />
+      </div>
       <div className="m-12">
         <PageTitle title="Home" />
-        <PageContent />
+        <PageContent content="This is The Chaos Emporium, a collection of bad ideas, poor styling, and abysmal time management. This site was uspposed to be interesting and funny, but I think thats happening." />
         <div className="flex justify-center gap-10 flex-wrap ">
           {xards.map((xards, idx) => (
             <Card
@@ -31,7 +35,9 @@ export default async function Home() {
             />
           ))}
         </div>
-        <PageContent content="These are even more words!" />
+      </div>
+      <div className="mt-auto">
+        <Footer authors="Nathan Rerucha" />
       </div>
     </div>
   )

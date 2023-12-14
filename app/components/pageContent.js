@@ -5,5 +5,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus odio ut
 Ut bibendum tempor semper. Suspendisse potenti. Sed venenatis, ipsum vel hendrerit tristique, urna dolor molestie sem, nec ornare massa felis in justo. Curabitur sed rutrum justo, non tristique augue. Sed maximus fermentum mauris sed dignissim. Vivamus mattis neque consectetur auctor mattis. Aliquam fermentum sagittis purus, nec gravida turpis. Quisque ac neque ut turpis malesuada tempus. `
 
 export default function PageContent({ content = defaultContent }) {
-  return <main className="bg-gray-100 rounded-md p-6">{content}</main>
+  return <main className="bg-gray-100 rounded-md my-4 p-6">{content}</main>
 }

@@ -6,6 +6,7 @@ import CardForm from '../components/CardForm'
 import PageLogo from '../components/Logo'
 import Footer from '../components/Footer'
 import OurTable from '../components/OurTable'
+import { findCards } from '../utils/supabase-client'
 
 const cardTableColumns = [
   {

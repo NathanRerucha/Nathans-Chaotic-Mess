@@ -36,7 +36,7 @@ export default async function Home() {
           ))}
         </div>
       </div>
-      <div className="mt-auto">
+      <div className="absolute bottom-0">
         <Footer authors="Nathan Rerucha" />
       </div>
     </div>

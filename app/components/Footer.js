@@ -42,7 +42,7 @@ function FooterNavbar() {
 
 export default function Footer({ logo = './icon.png', authors = 'Nathan Rerucha' }) {
   return (
-    <div className="flex absolute bottom-0 w-screen justify-center flex-row bg-black px-4 outline outline-white items-center">
+    <div className="flex mt-auto w-screen justify-center flex-row bg-black px-4 outline outline-white items-center">
       <div className="flex-1 ">
         <a href="./">
           <img

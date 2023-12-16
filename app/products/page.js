@@ -11,13 +11,18 @@ export default async function About() {
   return (
     <div>
       <PageLogo />
-      <Navbar />
+      <div className="my-4">
+        <Navbar />
+      </div>
       <div className="m-12">
         <PageTitle title="Products" />
-        <PageContent />
+        <div className="">
+          <PageContent />
+        </div>
       </div>
-      <div className="absolute bottom-0">{/* <Footer authors="Nathan Rerucha" /> */}</div>
-      <Footer />
+      <div className="absolute bottom-0">
+        <Footer />
+      </div>
     </div>
   )
 }

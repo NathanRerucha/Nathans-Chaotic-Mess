@@ -9,7 +9,9 @@ export default function About() {
   return (
     <div>
       <PageLogo />
-      <Navbar />
+      <div className="my-4">
+        <Navbar />
+      </div>
       <div className="m-12">
         <PageTitle title="Services" />
         <PageContent content="aaahhhhhhhhhhhhHHHHHHHHHHHHHHHHhhhHHHHHHhhhHHHhHHHHHHHHHHHHHHhHHhHHhhhhhhHHHHHHhhhHHHHhhHHHHhhhHHHhHHHhHHhhHHHHHHHHHHhhhHHHHHHHHHhhHHHHHHhhHHHhhhHHHHHHhhhHHHHHhhHHHHHhhHHHHHHHHhhHHHHHHHHHhhhHHHHHHHhhHHHHHHHHHhhHHHHHHHHHhhHHHHHHHhHHHhHHHHHHHhhHHHHhhHHHhhHHHHHHHhhHHHHhHHhhHHhhHHhHHHHHHhhHHHHHhHHHHhhhhHHHHHHhhhhHHHHHHHHhhhhhhhhhHHHHHHHhhhhhhHHHHHhhhHHHHHhhhhhhhhhhhhhhhhhhhhhhhHHHHHHHHHHHHHHHHHHHHHHHHHhhhHHHhhHHhhhhhHHHhhhhhhHHHHHHHhhHHHhHHHhhHHhhhHHHHHHHHHhhhHHHHhhHHHhhHHHHHHhhHHHHHhhHHHHhhhhhhhHHHHHHHHhhHHhhHHhhHHhhhhhhhhHHHHHHHHhhhhhhhhhhhhhhHHHHHHHHHHHhhhhhHHHhhhhhHHhhhhhhhhhHHHHHHHHHHHhhhhhhhhhhhhhHHHHHHHHHhhhhhhhhHHHhhhhhHHHhhhhhhhhhHHHHHHHHHHHHhhhhhhhhhhHHHHHHHHHHHHhhhhhhHHHhhhhhhHHHHhhhhhhHHHHHHHHHHHHhhhhhhhhhhHHHHHHHHHHHHhhhhhhhhHHHhhhhhHHHhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhHHHHHHHHHHHHHhhhhhhhHHhhhhhhhhhhhhhhhhhhhhhhhhhhHHHhhHHhhhhhhHHhhhhhhhhhhhhhhHHhHHhhHHhHHhhhhhHHhhhhhHhhHHhhhhHHhhhhhhhhhHHhhhhhhhh" />

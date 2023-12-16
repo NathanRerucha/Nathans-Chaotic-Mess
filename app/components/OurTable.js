@@ -49,9 +49,6 @@ export default function OurTable({ columns = defaultColumns, records = defualtRe
                 <Table.Cell key={`${record.id}-${idx}`}>{record[column.key]}</Table.Cell>
               ),
             )}
-            {/* <Table.RowHeaderCell>Danilo Sousa</Table.RowHeaderCell> */}
-            {/* <Table.Cell>danilo@example.com</Table.Cell> */}
-            {/* <Table.Cell>Developer</Table.Cell> */}
           </Table.Row>
         ))}
       </Table.Body>

@@ -8,7 +8,6 @@ import OurTable from '../components/OurTable'
 import { findCards } from '../utils/supabase-client'
 
 export default async function About() {
-  const cards = await findCards()
   return (
     <div>
       <PageLogo />

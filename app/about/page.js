@@ -26,7 +26,8 @@ const cardTableColumns = [
   },
 ]
 
-export default function About() {
+export default async function About() {
+  const cards = await findCards()
   return (
     <div className="relative">
       <PageLogo />

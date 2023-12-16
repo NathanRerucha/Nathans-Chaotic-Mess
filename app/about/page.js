@@ -37,9 +37,11 @@ export default async function About() {
         <PageTitle title="About" />
         <PageContent />
         <CardForm />
-        <OurTable columns={cardTableColumns} records={cards} />
+        <div className="bg-white p-4 rounded-md">
+          <OurTable columns={cardTableColumns} records={cards} />
+        </div>
       </div>
-      <div className="absolute bottom-0">
+      <div className="">
         <Footer authors="Nathan Rerucha" />
       </div>
     </div>

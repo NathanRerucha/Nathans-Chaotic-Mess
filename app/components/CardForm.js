@@ -12,10 +12,10 @@ async function createCard(formData) {
   let img = formData.get('img')
   let description = formData.get('description')
   if (['EMPTY', 'NULL', ''].includes(img)) {
-    img = 'https://placekitten.com/500/300'
+    img = 'https://placehold.co/600x400'
   }
   if (!img.includes('http')) {
-    img = 'https://placekitten.com/500/300'
+    img = 'https://placehold.co/600x400'
   }
   if (['EMPTY', 'NULL', ''].includes(title)) {
     title = 'Title'

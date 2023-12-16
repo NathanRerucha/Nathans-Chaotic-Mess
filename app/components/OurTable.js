@@ -10,19 +10,19 @@ const defualtRecords = [
 ]
 const defaultColumns = [
   {
-    title: 'Title',
+    title: 'Title ',
     key: 'title',
   },
   {
-    title: 'Subtitle',
+    title: 'Subtitle ',
     key: 'subtitle',
   },
   {
-    title: 'Image',
+    title: 'Image ',
     key: 'img',
   },
   {
-    title: 'Description',
+    title: 'Description ',
     key: 'description',
   },
 ]
@@ -36,8 +36,6 @@ export default function OurTable({ columns = defaultColumns, records = defualtRe
           {columns.map((column, idx) => (
             <Table.ColumnHeaderCell key={idx}>{column.title}</Table.ColumnHeaderCell>
           ))}
-          <Table.ColumnHeaderCell>Email</Table.ColumnHeaderCell>
-          <Table.ColumnHeaderCell>Group</Table.ColumnHeaderCell>
         </Table.Row>
       </Table.Header>
 

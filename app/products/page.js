@@ -17,6 +17,7 @@ export default async function About() {
         <PageContent />
       </div>
       <div className="absolute bottom-0">{/* <Footer authors="Nathan Rerucha" /> */}</div>
+      <Footer />
     </div>
   )
 }
